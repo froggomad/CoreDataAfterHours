@@ -16,7 +16,7 @@
 		B92AD180244C082D00060897 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AD17F244C082D00060897 /* CoreDataStack.swift */; };
 		B92AD183244C105000060897 /* APICastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AD182244C105000060897 /* APICastMember.swift */; };
 		B92AD185244C110100060897 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AD184244C110100060897 /* APIController.swift */; };
-		B92AD192244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B92AD190244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodeld */; };
+		B92AD195244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B92AD193244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		B92AD182244C105000060897 /* APICastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICastMember.swift; sourceTree = "<group>"; };
 		B92AD184244C110100060897 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		B92AD186244C951B00060897 /* networking.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = networking.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		B92AD191244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFavoriteShadowsModel.xcdatamodel; sourceTree = "<group>"; };
+		B92AD194244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFavoriteShadowsModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				B92AD17E244C081400060897 /* Helpers */,
-				B92AD190244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -141,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B92AD17F244C082D00060897 /* CoreDataStack.swift */,
+				B92AD193244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodeld */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B92AD168244C078D00060897 /* AllCastViewController.swift in Sources */,
-				B92AD192244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodeld in Sources */,
+				B92AD195244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodeld in Sources */,
 				B92AD164244C078D00060897 /* AppDelegate.swift in Sources */,
 				B92AD185244C110100060897 /* APIController.swift in Sources */,
 				B92AD166244C078D00060897 /* SceneDelegate.swift in Sources */,
@@ -438,12 +438,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B92AD190244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodeld */ = {
+		B92AD193244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B92AD191244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodel */,
+				B92AD194244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodel */,
 			);
-			currentVersion = B92AD191244CA6D500060897 /* MyFavoriteShadowsModel.xcdatamodel */;
+			currentVersion = B92AD194244CADB500060897 /* MyFavoriteShadowsModel.xcdatamodel */;
 			path = MyFavoriteShadowsModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
