@@ -17,9 +17,27 @@ class AllCastViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        print(controller.allCharacters)
+    }
+
+    // MARK: TableView Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let castRep = controller.allCharacters[indexPath.row]
+
+        CastMember(character: castRep.character,
+                   actor: castRep.actor,
+                   gender: castRep.gender.rawValue,
+                   id: castRep.id)
+        do {
+            try CoreDataStack.shared.save()
+        } catch let saveFavoriteCastError {
+            print("Error saving Cast member: \(saveFavoriteCastError)", #file, #function, #line)
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
+
+
 //MARK: - tableView DataSource -
 extension AllCastViewController: UITableViewDataSource {
     //MARK: Num Sections -
@@ -30,7 +48,7 @@ extension AllCastViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         controller.allCharacters.count
     }
-    //MARK: Cell for row at -
+    //MARK: Cell for row at indexPath -
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let character = controller.allCharacters[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
