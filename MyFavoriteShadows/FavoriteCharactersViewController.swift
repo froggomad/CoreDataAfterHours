@@ -22,7 +22,7 @@ class FavoriteCharactersViewController: UIViewController, NSFetchedResultsContro
         context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
                                              managedObjectContext: context,
-                                             sectionNameKeyPath: characterKey,
+                                             sectionNameKeyPath: nil,
                                              cacheName: nil)
         frc.delegate = self
         do {
