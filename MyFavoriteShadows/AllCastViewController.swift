@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllCastViewController: UIViewController, UITableViewDelegate {
+class AllCastViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let cellID = "APICell"
     let controller = APIController()
@@ -20,17 +20,17 @@ class AllCastViewController: UIViewController, UITableViewDelegate {
         print(controller.allCharacters)
     }
 }
+
 //MARK: - tableView DataSource -
 extension AllCastViewController: UITableViewDataSource {
-    //MARK: Num Sections -
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
-    //MARK: Num Rows in Section -
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         controller.allCharacters.count
     }
-    //MARK: Cell for row at -
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let character = controller.allCharacters[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
@@ -38,7 +38,10 @@ extension AllCastViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = character.actor
         return cell
     }
-    //MARK: Header View -
+
+}
+
+extension AllCastViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let padding: CGFloat = 8
 
@@ -84,4 +87,3 @@ extension AllCastViewController: UITableViewDataSource {
     }
 
 }
-
